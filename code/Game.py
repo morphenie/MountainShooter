@@ -4,29 +4,21 @@
 import pygame
 
 from code.Menu import Menu
+from code.const import WIN_WIDTH, WIN_HEIGHT
 
 
 class Game:
     def __init__(self):  #construtor da class Game
         pygame.init()  # é necessário para iniciar o pacote do pygame
-        self.window = pygame.display.set_mode(size=(600, 480))  # criação de janela do jogo
+        self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))  # criação de janela do jogo com a resolução da imagem
 
     def run(self):  #método run
 
-        # ---------- aqui foi copiado do main ---------
-#        print('Setup Start')
 
-#        print('Setup End')
-
-#        print('Loop Start')
         while True:
             menu = Menu(self.window)
             menu.run()
             pass
 
 
-            # Check for all events
-            #for event in pygame.event.get():
-            #    if event.type == pygame.QUIT:  # o evento do tipo "fechar janela"
-            #        pygame.quit()  # Close window
-            #        quit()  # End Pygame
+##
