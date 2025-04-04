@@ -7,3 +7,7 @@ from code.Game import Game
 
 game = Game()
 game.run()
+
+
+# parallax: significa o modo que o fundo irá se movimentar, contendo várias camadas.
+
