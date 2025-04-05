@@ -18,10 +18,10 @@ class Game:
             menu = Menu(self.window)
             menu_return = menu.run()
 
-            if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:  # para entrar no jogo efetivamente
+            if menu_return in [MENU_OPTION[0]]:  # para entrar no jogo efetivamente
                 level = Level(self.window, 'Level1', menu_return)  # parâmetro para escolher o level
                 level_return = level.run()
-            elif menu_return == MENU_OPTION[4]:
+            elif menu_return == MENU_OPTION[2]:
                 pygame.quit()  # Close window
                 quit()  # End Pygame
             else:  # score
