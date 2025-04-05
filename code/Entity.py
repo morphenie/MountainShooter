@@ -4,6 +4,8 @@ from abc import ABC, abstractmethod
 
 import pygame.image
 
+from code.const import ENTITY_HEALTH
+
 
 class Entity(ABC):  # nome é para inicializar o objeto entity
 
@@ -12,6 +14,7 @@ class Entity(ABC):  # nome é para inicializar o objeto entity
         self.surf = pygame.image.load('./asset/' + name + '.png').convert_alpha()  # caminho genérico para pegar as imagens
         self.rect = self.surf.get_rect(left=position[0], top=position[1])  # tbm genérico pq o asset pode aparecer em qqr lugar na tela
         self.speed = 0
+        self.health = ENTITY_HEALTH[self.name]
 
     @abstractmethod  # decorator (?)
     def move(self, ):
