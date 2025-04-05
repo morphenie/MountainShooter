@@ -1,5 +1,9 @@
 from code.Enemy import Enemy
+from code.EnemyShot import EnemyShot
 from code.Entity import Entity
+from code.PlayerShot import PlayerShot
+from code.const import WIN_WIDTH
+
 
 # mediação entre entidades - colisões
 class EntityMediator:
@@ -9,6 +13,13 @@ class EntityMediator:
         if isinstance(ent, Enemy): # destruição do inimigo
             if ent.rect.right < 0:
                 ent.health = 0
+        if isinstance(ent, PlayerShot):
+            if ent.rect.left >= WIN_WIDTH:
+                ent.health = 0
+        if isinstance(ent, EnemyShot):
+            if ent.rect.right <= 0:
+                ent.health = 0
+
 
     @staticmethod
     def verify_collision(entity_list: list[Entity]):  # esse método está recebendo todas as entidades
