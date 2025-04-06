@@ -33,13 +33,13 @@ ENTITY_DAMAGE = {
     'Player': 1,  # nave do jogador
     'PlayerShot': 25,
     'Enemy1': 1,
-    'Enemy1Shot': 20,
+    'Enemy1Shot': 25,
     'Enemy2': 1,
-    'Enemy2Shot': 15,
-    'Enemy1_L2': 1,
-    'Enemy1_L2Shot': 20,
-    'Enemy2_L2': 1,
-    'Enemy2_L2Shot': 15
+    'Enemy2Shot': 30,
+    'Enemy1_L2': 10,
+    'Enemy1_L2Shot': 30,
+    'Enemy2_L2': 10,
+    'Enemy2_L2Shot': 30
 }
 
 ENTITY_SPEED = {
@@ -62,7 +62,7 @@ ENTITY_SPEED = {
     'Enemy1Shot': 4,
     'Enemy2': 1,
     'Enemy2Shot': 3,
-    'Enemy1_L2': 1,
+    'Enemy1_L2': 2,
     'Enemy1_L2Shot': 3,
     'Enemy2_L2': 1,
     'Enemy2_L2Shot': 3
@@ -86,13 +86,13 @@ ENTITY_HEALTH = {
 
     'Player': 300,
     'PlayerShot': 1,
-    'Enemy1': 50,
+    'Enemy1': 60,
     'Enemy1Shot': 1,
     'Enemy2': 60,
     'Enemy2Shot': 1,
     'Enemy1_L2': 60,
     'Enemy1_L2Shot': 1,
-    'Enemy2_L2': 50,
+    'Enemy2_L2': 60,
     'Enemy2_L2Shot': 1
 }
 
@@ -140,6 +140,7 @@ MENU_OPTION = ('NEW GAME',
                'SCORE',
                'EXIT')
 
+
 # T
 TIMEOUT_LEVEL = 20000  # 20 segundos
 TIMEOUT_STEP = 100  # 100 ms
@@ -151,3 +152,20 @@ TIMEOUT_STEP = 100  # 100 ms
 WIN_WIDTH = 560
 WIN_HEIGHT = 330
 
+
+# S
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 30),
+             'EnterName': (WIN_WIDTH / 2, 80),
+             'Label': (WIN_WIDTH / 2, 90),
+             'Name': (WIN_WIDTH / 2, 110),
+             0: (WIN_WIDTH / 2, 110),
+             1: (WIN_WIDTH / 2, 130),
+             2: (WIN_WIDTH / 2, 150),
+             3: (WIN_WIDTH / 2, 170),
+             4: (WIN_WIDTH / 2, 190),
+             5: (WIN_WIDTH / 2, 210),
+             6: (WIN_WIDTH / 2, 230),
+             7: (WIN_WIDTH / 2, 250),
+             8: (WIN_WIDTH / 2, 270),
+             9: (WIN_WIDTH / 2, 290)
+}
