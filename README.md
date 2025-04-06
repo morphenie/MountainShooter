@@ -1,4 +1,4 @@
-![alt text](https://github.com/morphenie/SpookyShooter/blob/main/asset/paaw.png?raw=true "Spooky Paws") Spooky Paws ![alt text](https://github.com/morphenie/SpookyShooter/blob/main/asset/paaw.png?raw=true "Spooky Paws")
+![alt text](https://github.com/morphenie/SpookyShooter/blob/master/asset/paaw.png "Spooky Paws") Spooky Paws ![alt text](https://github.commorphenie/SpookyShooter/blob/master/asset/paaw.png "Spooky Paws")
 ========================================
 
 ### About
