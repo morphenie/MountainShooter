@@ -19,9 +19,6 @@ class Entity(ABC):  # nome é para inicializar o objeto entity
         self.score = ENTITY_SCORE[self.name]
         self.last_dmg = 'None'
 
-
     @abstractmethod  # decorator (?)
     def move(self, ):
         pass
-
-##

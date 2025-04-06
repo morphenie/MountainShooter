@@ -35,5 +35,3 @@ class EntityFactory:
             case 'Enemy2':
                 enemy_name = 'Enemy2_L2' if level == 'Level2' else 'Enemy2'
                 return Enemy(enemy_name, (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)))
-
-##

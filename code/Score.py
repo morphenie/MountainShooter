@@ -27,10 +27,10 @@ class Score:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.score_text(40, 'YOU WON!!', C_LIGHT, SCORE_POS['Title'])
-
+            score = player_score[0]
+            text = 'Enter your name (4 characters): '
             if menu_return == MENU_OPTION[0]:
                 score = player_score[0]
-                text = 'Enter your name (4 characters): '
             self.score_text(20, text, C_WHITE, SCORE_POS['EnterName'])
 
             for event in pygame.event.get():  # para fechar janela
@@ -84,6 +84,7 @@ class Score:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
+
 
 def get_formatted_date():
     current_datetime = datetime.now()
