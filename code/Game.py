@@ -22,8 +22,8 @@ class Game:
                 player_score = [0]
                 level = Level(self.window, 'Level1', menu_return, player_score)  # parâmetro para escolher o level
                 level_return = level.run(player_score)
-                if level_return:
-                    level = Level(self.window, 'Level2', menu_return, player_score)  # lvl2
+                if level_return:  # igual a True
+                    level = Level(self.window, 'Level2', menu_return, player_score)  # lvl 2
                     level_return = level.run(player_score)
 
 

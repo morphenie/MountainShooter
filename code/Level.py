@@ -19,9 +19,11 @@ class Level:
     def __init__(self, window: Surface, name: str, game_mode: str, player_score: list[int]):
         self.window = window
         self.name = name
+        self.level_name = name  # !!!
         self.game_mode = game_mode  # modo de jogo, 1p 2p etc
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity(self.name + 'Bg'))
+        self.level_name = name  # guarda o nome da fase !!!
 
         player = EntityFactory.get_entity('Player')
         player.score = player_score[0]
@@ -34,7 +36,7 @@ class Level:
         
     def run(self, player_score: list[int]):
         pygame.mixer.music.load(f'./asset/{self.name}.mp3')
-        pygame.mixer.music.play(-1)
+        pygame.mixer.music.play(-1, fade_ms=2000)
         clock = pygame.time.Clock()
         while True:
             clock.tick(60)
@@ -57,14 +59,14 @@ class Level:
                     sys.exit()
                 if event.type == EVENT_ENEMY:
                     choice = random.choice(('Enemy1', 'Enemy2'))
-                    self.entity_list.append(EntityFactory.get_entity(choice))
+                    enemy = EntityFactory.get_entity(choice, level=self.level_name)  # !!!
+                    self.entity_list.append(enemy)
                 if event.type == EVENT_TIMEOUT:
                     self.timeout -= TIMEOUT_STEP
                     if self.timeout == 0:
                         for ent in self.entity_list:
                             if isinstance(ent, Player) and ent.name == 'Player':
                                 player_score[0] = ent.score
-
                         return True
 
                 found_player = False

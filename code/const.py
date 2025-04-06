@@ -36,6 +36,10 @@ ENTITY_DAMAGE = {
     'Enemy1Shot': 20,
     'Enemy2': 1,
     'Enemy2Shot': 15,
+    'Enemy1_L2': 1,
+    'Enemy1_L2Shot': 20,
+    'Enemy2_L2': 1,
+    'Enemy2_L2Shot': 15
 }
 
 ENTITY_SPEED = {
@@ -57,7 +61,11 @@ ENTITY_SPEED = {
     'Enemy1': 1,
     'Enemy1Shot': 4,
     'Enemy2': 1,
-    'Enemy2Shot': 3
+    'Enemy2Shot': 3,
+    'Enemy1_L2': 1,
+    'Enemy1_L2Shot': 3,
+    'Enemy2_L2': 1,
+    'Enemy2_L2Shot': 3
 
 }
 
@@ -82,6 +90,10 @@ ENTITY_HEALTH = {
     'Enemy1Shot': 1,
     'Enemy2': 60,
     'Enemy2Shot': 1,
+    'Enemy1_L2': 60,
+    'Enemy1_L2Shot': 1,
+    'Enemy2_L2': 50,
+    'Enemy2_L2Shot': 1
 }
 
 ENTITY_SCORE = {
@@ -103,14 +115,21 @@ ENTITY_SCORE = {
     'Enemy1': 100,
     'Enemy1Shot': 0,
     'Enemy2': 125,
-    'Enemy2Shot': 0
+    'Enemy2Shot': 0,
+    'Enemy1_L2': 100,
+    'Enemy1_L2Shot': 0,
+    'Enemy2_L2': 125,
+    'Enemy2_L2Shot': 0
 
 }
 
 ENTITY_SHOT_DELAY = {
     'Player': 25,
     'Enemy1': 100,
-    'Enemy2': 90
+    'Enemy2': 90,
+    'Enemy1_L2': 90,
+    'Enemy2_L2': 90,
+
 
 }
 
