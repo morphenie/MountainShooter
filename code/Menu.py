@@ -4,7 +4,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE, COLOR_LIGHT, COLOR_PP
+from code.const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_LIGHT, C_PURPLE
 
 
 class Menu:
@@ -24,15 +24,15 @@ class Menu:
             self.menu_text(50, "Spooky", (50, 50, 50), ((WIN_WIDTH / 2) - 2, 70 + 2))  # Sombra
             self.menu_text(42, "Paws   ", (50, 50, 50), ((WIN_WIDTH / 2) - 2, 120 + 2))  # Sombra
 
-            self.menu_text(50, "Spooky", COLOR_PP, ((WIN_WIDTH / 2), 70))  # Escrever o texto, não pode vir antes da imagem para ele não ficar por baixo dela
-            self.menu_text(42, "Paws   ", COLOR_PP, ((WIN_WIDTH / 2), 120))  # Escrever o texto, não pode vir antes da imagem para ele não ficar por baixo dela
+            self.menu_text(50, "Spooky", C_PURPLE, ((WIN_WIDTH / 2), 70))  # Escrever o texto, não pode vir antes da imagem para ele não ficar por baixo dela
+            self.menu_text(42, "Paws   ", C_PURPLE, ((WIN_WIDTH / 2), 120))  # Escrever o texto, não pode vir antes da imagem para ele não ficar por baixo dela
 
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:  # loop para mudança de cor ao selecionar
-                    self.menu_text(20, MENU_OPTION[i], COLOR_LIGHT, ((WIN_WIDTH / 2), 200 + 35*i))
+                    self.menu_text(20, MENU_OPTION[i], C_LIGHT, ((WIN_WIDTH / 2), 200 + 35 * i))
                 else:
-                    self.menu_text(20, MENU_OPTION[i], COLOR_ORANGE, ((WIN_WIDTH / 2), 200 + 35*i))
+                    self.menu_text(20, MENU_OPTION[i], C_ORANGE, ((WIN_WIDTH / 2), 200 + 35 * i))
             pygame.display.flip()  # para atualizar na tela e aparecer a imagem
 
             # Check for all events

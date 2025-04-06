@@ -4,19 +4,37 @@ import pygame
 # C
 
 # Constantes de cores
-COLOR_ORANGE = (222, 98, 2)
-COLOR_WHITE = (255, 255, 255)
-COLOR_LIGHT = (241, 199, 168)
-COLOR_PP = (100, 21, 119)
+C_ORANGE = (222, 98, 2)
+C_WHITE = (255, 255, 255)
+C_LIGHT = (241, 199, 168)
+C_PURPLE = (100, 21, 119)
 COLOR_DB = (34, 4, 88)
+C_VIOLET = (192, 145, 255)
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
+
+ENTITY_DAMAGE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'Level1Bg5': 0,
+    'Level1Bg6': 0,
+    'Player': 1,  # nave do jogador
+    'PlayerShot': 25,
+    'Enemy1': 1,
+    'Enemy1Shot': 20,
+    'Enemy2': 1,
+    'Enemy2Shot': 15,
+}
+
 ENTITY_SPEED = {
     'Level1Bg0': 0,
     'Level1Bg1': 0,
     'Level1Bg2': 2*0.4,
-    'Level1Bg3': 3,
+    'Level1Bg3': 2,
     'Level1Bg4': 4,
     'Level1Bg5': 5,
     'Player': 3,
@@ -44,10 +62,26 @@ ENTITY_HEALTH = {
     'Enemy2Shot': 1,
 }
 
-ENTITY_SHOT_DELAY = {
-    'Player': 20,
+ENTITY_SCORE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'Level1Bg5': 0,
+    'Player': 0,
+    'PlayerShot': 0,
     'Enemy1': 100,
-    'Enemy2': 80
+    'Enemy1Shot': 0,
+    'Enemy2': 125,
+    'Enemy2Shot': 0
+
+}
+
+ENTITY_SHOT_DELAY = {
+    'Player': 25,
+    'Enemy1': 100,
+    'Enemy2': 100
 
 }
 

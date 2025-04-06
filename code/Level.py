@@ -12,7 +12,7 @@ from code.EntityMediator import EntityMediator
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.Player import Player
-from code.const import COLOR_WHITE, WIN_HEIGHT, EVENT_ENEMY
+from code.const import C_WHITE, WIN_HEIGHT, EVENT_ENEMY, C_VIOLET
 
 
 class Level:
@@ -41,6 +41,10 @@ class Level:
                     if shoot is not None:
                         self.entity_list.append(shoot)
 
+                # hubs
+                if ent.name == 'Player':
+                    self.level_text(14, f'Player Health: {ent.health} |  Score: {ent.score}', C_VIOLET, (10, 25))
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -49,10 +53,12 @@ class Level:
                     choice = random.choice(('Enemy1', 'Enemy2'))
                     self.entity_list.append(EntityFactory.get_entity(choice))
 
+
+
             # printed text
-            self.level_text(12, f'{self.name} - Timeout: {self.timeout / 1000: .1f}s', COLOR_WHITE, (10,5))
-            self.level_text(12, f'FPS: {clock.get_fps() : .0f}', COLOR_WHITE, (10, WIN_HEIGHT - 35))
-            self.level_text(12, f'Entidades: {len(self.entity_list)}', COLOR_WHITE, (10, WIN_HEIGHT - 20))
+            self.level_text(12, f'{self.name} - Timeout: {self.timeout / 1000: .1f}s', C_WHITE, (10, 5))
+            self.level_text(12, f'FPS: {clock.get_fps() : .0f}', C_WHITE, (10, WIN_HEIGHT - 35))
+            self.level_text(12, f'Entidades: {len(self.entity_list)}', C_WHITE, (10, WIN_HEIGHT - 20))
             pygame.display.flip()
 
             # collisions
